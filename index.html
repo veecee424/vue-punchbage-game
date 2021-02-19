@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        <section id="game">
+            <!-- bag image -->
+            <div id="bag-image" v-bind:class="{bursted: ended}"></div>
+            <!-- bag health bar -->
+            <div id="bag-health">
+                <div v-bind:style="{width: health + '%'}"></div>
+            </div>
+            <!-- buttons -->
+            <div id="buttons">
+                <button v-on:click="punch" v-show="gameOn">Punch</button>
+                <button v-on:click="restart">Restart</button>
+            </div>
+        </section>
+    </body>
+    <script src="/app.js"></script>
+    <footer>
+
+    </footer>
+</html>
